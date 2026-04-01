@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kapee — Coffee, Crafted.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="kapee.css">
+</head>
+<body>
+
+<!-- ══ NAVBAR ══ -->
+<header>
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a class="nav-logo" href="#" onclick="showPage('home');return false;" aria-label="Kapee Home">Ka<span>p</span>ee</a>
+      <ul class="nav-links" role="list">
+        <li><a href="#" class="active" onclick="showPage('home');return false;" data-page="home">Home</a></li>
+        <li><a href="#" onclick="showPage('menu');return false;" data-page="menu">Menu</a></li>
+        <li><a href="#" onclick="showPage('about');return false;" data-page="about">About</a></li>
+        <li><a href="#" onclick="showPage('reviews');return false;" data-page="reviews">Reviews</a></li>
+        <li><a href="#" onclick="showPage('locations');return false;" data-page="locations">Locations</a></li>
+        <li><a href="#" onclick="showPage('contact');return false;" data-page="contact">Contact</a></li>
+      </ul>
+      <a href="#" class="nav-order-btn" onclick="showPage('order');return false;">Order Now</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navDrawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <nav class="nav-drawer" id="navDrawer" aria-label="Mobile navigation">
+    <a href="#" onclick="showPage('home');closeDrawer();return false;">Home</a>
+    <a href="#" onclick="showPage('menu');closeDrawer();return false;">Menu</a>
+    <a href="#" onclick="showPage('about');closeDrawer();return false;">Our Story</a>
+    <a href="#" onclick="showPage('locations');closeDrawer();return false;">Locations</a>
+    <a href="#" onclick="showPage('contact');closeDrawer();return false;">Contact</a>
+    <a href="#" class="drawer-order" onclick="showPage('order');closeDrawer();return false;">Order Now</a>
+  </nav>
+</header>
+
+<!-- ══════════════════ PAGE: HOME ══════════════════ -->
+<main id="page-home" class="page active">
+
+  <!-- Static Hero -->
+  <section class="hero-static" aria-label="Welcome to Kapee">
+    <div class="hero-static-bg" role="img" aria-label="Inside Kapee coffee shop — warm wooden interior with soft lighting"></div>
+    <div class="hero-static-content">
+      <p class="hero-eyebrow">Est. 2019 · Handcrafted Coffee</p>
+      <h1 class="hero-title">Every cup,<br><em>a small ritual.</em></h1>
+      <p class="hero-sub">Sourced from the world's finest farms. Roasted to perfection. Served with care in a space made for you.</p>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="promise-strip" aria-hidden="true">
+    <div class="marquee-inner">
+      <span>Single Origin Beans</span><span class="dot-sep">·</span>
+      <span>Ethically Sourced</span><span class="dot-sep">·</span>
+      <span>Small Batch Roasted</span><span class="dot-sep">·</span>
+      <span>Latte Art</span><span class="dot-sep">·</span>
+      <span>Seasonal Specials</span><span class="dot-sep">·</span>
+      <span>Plant-Based Options</span><span class="dot-sep">·</span>
+      <span>Free Wi-Fi</span><span class="dot-sep">·</span>
+      <span>Single Origin Beans</span><span class="dot-sep">·</span>
+      <span>Ethically Sourced</span><span class="dot-sep">·</span>
+      <span>Small Batch Roasted</span><span class="dot-sep">·</span>
+      <span>Latte Art</span><span class="dot-sep">·</span>
+      <span>Seasonal Specials</span><span class="dot-sep">·</span>
+      <span>Plant-Based Options</span><span class="dot-sep">·</span>
+      <span>Free Wi-Fi</span><span class="dot-sep">·</span>
+    </div>
+  </div>
+
+  <!-- Featured Drinks -->
+  <section class="section" aria-labelledby="featured-heading">
+    <div class="container">
+      <span class="section-label">On the Menu</span>
+      <h2 class="section-title" id="featured-heading">Crowd Favourites</h2>
+      <p class="section-lead">Our most loved creations, month after month — each one carefully developed by our team.</p>
+      <div class="featured-grid">
+        <article class="feat-card">
+          <img src="IMGs/kapeeclassic.jpg" alt="Kapee Signature Espresso in a small white cup" loading="lazy" />
+          <div class="feat-card-body">
+            <p class="feat-card-tag">Espresso</p>
+            <h3 class="feat-card-name">Kapee Classic</h3>
+            <p class="feat-card-price">₱95</p>
+          </div>
+        </article>
+        <article class="feat-card">
+          <img src="IMGs/milkandhoneylatte.jpg" alt="Creamy iced latte with milk foam in a tall glass" loading="lazy" />
+          <div class="feat-card-body">
+            <p class="feat-card-tag">Iced</p>
+            <h3 class="feat-card-name">Milk &amp; Honey Latte</h3>
+            <p class="feat-card-price">₱135</p>
+          </div>
+        </article>
+        <article class="feat-card">
+          <img src="IMGs/kyotomatcha.jpg" alt="Vibrant matcha latte in a clear glass" loading="lazy" />
+          <div class="feat-card-body">
+            <p class="feat-card-tag">Seasonal</p>
+            <h3 class="feat-card-name">Kyoto Matcha</h3>
+            <p class="feat-card-price">₱145</p>
+          </div>
+        </article>
+      </div>
+      <div style="text-align:center; margin-top:3rem;">
+        <a href="#" class="btn-primary" onclick="showPage('menu');return false;">See Full Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story Split -->
+  <div class="story-split">
+    <div class="story-img">
+      <img src="IMGs/mainbg.jpg" alt="Story picture" loading="lazy" />
+    </div>
+    <div class="story-text">
+      <span class="section-label">Who We Are</span>
+      <h2 class="section-title">Coffee should be an<br><em>experience,</em> not a habit.</h2>
+      <p>We opened Kapee because we believed the city deserved a place where coffee was taken seriously — not just as fuel, but as a craft.</p>
+      <p>Every bean is chosen, every roast is logged, and every pour is intentional. That's the Kapee promise.</p>
+      <a href="#" class="btn-sand" onclick="showPage('about');return false;">Our Full Story</a>
+    </div>
+  </div>
+
+  <!-- Home Reviews Preview -->
+  <section class="home-reviews" aria-labelledby="home-reviews-heading">
+    <div class="container">
+      <div class="reviews-top">
+        <div>
+          <span class="section-label">What People Say</span>
+          <h2 class="section-title" id="home-reviews-heading" style="margin-bottom:0.5rem;">Loved by the community.</h2>
+          <p class="section-lead" style="margin-bottom:0;">Real words from real regulars.</p>
+        </div>
+        <div class="reviews-btns">
+          <a href="#" class="btn-primary" onclick="showPage('reviews');return false;">Full Reviews</a>
+          <a href="#" class="btn-outline-dark" onclick="showPage('contact');scrollToFeedback();return false;">Leave Your Review</a>
+        </div>
+      </div>
+      <div class="test-grid-home">
+        <article class="test-card">
+          <p class="test-stars">★★★★★</p>
+          <p class="test-quote">"The latte art alone is worth the trip. I've become a regular and I don't see that changing anytime soon."</p>
+          <p class="test-author">— Maria L., Regular</p>
+        </article>
+        <article class="test-card">
+          <p class="test-stars">★★★★★</p>
+          <p class="test-quote">"Minimalist, calm, and the coffee is genuinely exceptional. Exactly what I needed for my work-from-cafe days."</p>
+          <p class="test-author">— Dan C., Freelancer</p>
+        </article>
+        <article class="test-card">
+          <p class="test-stars">★★★★★</p>
+          <p class="test-quote">"The Kyoto Matcha is unlike anything I've had. Kapee clearly cares about quality, not just aesthetics."</p>
+          <p class="test-author">— Sofia R., Food Blogger</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ══════════════════ PAGE: REVIEWS ══════════════════ -->
+<main id="page-reviews" class="page" aria-label="Reviews page">
+  <div class="reviews-hero">
+    <div class="container">
+      <span class="section-label">Customer Reviews</span>
+      <h1>What our guests say</h1>
+      <p>Unfiltered, unedited — straight from the people who come back again and again.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="reviews-full-grid">
+
+      <article class="test-card">
+        <p class="test-stars">★★★★★</p>
+        <p class="test-quote">"The latte art alone is worth the trip. I've become a regular and I don't see that changing anytime soon."</p>
+        <p class="test-author">— Maria L., Makati Regular</p>
+      </article>
+
+      <article class="test-card">
+        <p class="test-stars">★★★★★</p>
+        <p class="test-quote">"Minimalist, calm, and the coffee is genuinely exceptional. Exactly what I needed for my work-from-cafe days."</p>
+        <p class="test-author">— Dan C., Freelancer</p>
+      </article>
+
+      <article class="test-card">
+        <p class="test-stars">★★★★★</p>
+        <p class="test-quote">"The Kyoto Matcha is unlike anything I've had. Kapee clearly cares about quality, not just aesthetics."</p>
+        <p class="test-author">— Sofia R., Food Blogger</p>
+      </article>
+
+      <article class="test-card">
+        <p class="test-stars">★★★★★</p>
+        <p class="test-quote">"I visited the BGC branch for the first time and was blown away. The Cold Brew is the best I've ever had in Manila — no exaggeration."</p>
+        <p class="test-author">— Kevin M., BGC Visitor</p>
+      </article>
+
+      <article class="test-card">
+        <p class="test-stars">★★★★★</p>
+        <p class="test-quote">"Came for the coffee, stayed for the ambiance. The Avocado Toast is incredible too. This place checks every box."</p>
+        <p class="test-author">— Camille D., Lifestyle Writer</p>
+      </article>
+
+      <article class="test-card">
+        <p class="test-stars">★★★★★</p>
+        <p class="test-quote">"My go-to morning spot before work. The baristas remember my order and that small detail means everything."</p>
+        <p class="test-author">— Nico B., Daily Regular</p>
+      </article>
+
+      <article class="test-card">
+        <p class="test-stars">★★★★★</p>
+        <p class="test-quote">"Finally, a coffee shop that takes oat milk seriously. The Flat White with oat is perfection — smooth, balanced, and never bitter."</p>
+        <p class="test-author">— Jess T., Plant-Based Advocate</p>
+      </article>
+
+      <article class="test-card">
+        <p class="test-stars">★★★★★</p>
+        <p class="test-quote">"The Brown Butter Banana Loaf sold out by 10AM when I visited. I learned my lesson — I get there by 8 now. Worth every minute."</p>
+        <p class="test-author">— Anna F., Pastry Enthusiast</p>
+      </article>
+
+      <article class="test-card">
+        <p class="test-stars">★★★★★</p>
+        <p class="test-quote">"Brought my parents here and they both ordered a second round without being asked. That says everything about Kapee."</p>
+        <p class="test-author">— Miguel A., Alabang Customer</p>
+      </article>
+
+      <article class="test-card">
+        <p class="test-stars">★★★★★</p>
+        <p class="test-quote">"The Nitro Cold Brew hits differently when it's served in that clear glass. The presentation and the flavor are both outstanding."</p>
+        <p class="test-author">— Trisha V., Weekend Regular</p>
+      </article>
+
+      <article class="test-card">
+        <p class="test-stars">★★★★★</p>
+        <p class="test-quote">"I've been to cafes across Southeast Asia and Kapee holds its own against every single one. Genuinely proud this place exists."</p>
+        <p class="test-author">— Raffy O., Frequent Traveler</p>
+      </article>
+
+      <article class="test-card">
+        <p class="test-stars">★★★★★</p>
+        <p class="test-quote">"Quiet, focused energy. Exactly the kind of space I need for deep work. The Americano kept me going through a 6-hour session."</p>
+        <p class="test-author">— Lei M., Remote Worker</p>
+      </article>
+
+      <article class="test-card">
+        <p class="test-stars">★★★★★</p>
+        <p class="test-quote">"My daughter and I made it our Saturday tradition. She gets the hot choco, I get the Milk & Honey Latte. We're very happy about it."</p>
+        <p class="test-author">— Diane S., Mom & Regular</p>
+      </article>
+
+      <article class="test-card">
+        <p class="test-stars">★★★★★</p>
+        <p class="test-quote">"Ordered the Dark Choco Chip Cookie and genuinely had to stop myself from ordering three more. Warm, thick, absolutely unreal."</p>
+        <p class="test-author">— Bernard Y., Cookie Obsessed</p>
+      </article>
+
+      <article class="test-card">
+        <p class="test-stars">★★★★★</p>
+        <p class="test-quote">"I recommended Kapee to four friends last month. All four of them texted me within a day to say thank you. That's all you need to know."</p>
+        <p class="test-author">— Paolo G., Brand Evangelist</p>
+      </article>
+
+    </div>
+    <div style="text-align:center; padding-bottom:5rem;">
+      <a href="#" class="btn-outline-dark" onclick="showPage('contact');scrollToFeedback();return false;">Leave Your Own Review</a>
+    </div>
+  </div>
+</main>
+
+<!-- ══════════════════ PAGE: MENU ══════════════════ -->
+<main id="page-menu" class="page" aria-label="Menu page">
+  <div class="menu-hero">
+    <div class="container">
+      <span class="section-label">What We Serve</span>
+      <h1>The Kapee Menu</h1>
+      <p>Handcrafted beverages, fresh pastries, and light bites — made with ingredients we believe in.</p>
+    </div>
+  </div>
+  <div class="tab-bar" role="tablist" aria-label="Menu categories">
+    <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="tab-espresso" onclick="switchTab(this,'tab-espresso')">Espresso</button>
+    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-cold" onclick="switchTab(this,'tab-cold')">Cold Drinks</button>
+    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-non" onclick="switchTab(this,'tab-non')">Non-Coffee</button>
+    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-food" onclick="switchTab(this,'tab-food')">Food</button>
+  </div>
+  <div class="menu-section">
+    <div class="container">
+      <div id="tab-espresso" class="tab-panel active" role="tabpanel">
+        <div class="menu-grid">
+          <div class="menu-item"><img class="menu-item-photo" src="IMGs/kapeeclassic.jpg" alt="Kapee Classic espresso" /><div class="menu-item-info"><h3 class="menu-item-name">Kapee Classic <span class="menu-item-badge">Bestseller</span></h3><p class="menu-item-desc">A double-shot espresso with deep chocolate and caramel notes. Clean, bold, unforgettable.</p><p class="menu-item-price">₱95</p></div></div>
+          <div class="menu-item"><img class="menu-item-photo" src="IMGs/americano.jpg" alt="Americano coffee" /><div class="menu-item-info"><h3 class="menu-item-name">Americano</h3><p class="menu-item-desc">Espresso diluted with hot water. Full-bodied, minimal, and perfect.</p><p class="menu-item-price">₱95</p></div></div>
+          <div class="menu-item"><img class="menu-item-photo" src="IMGs/flatwhite.jpg" alt="Flat White coffee" /><div class="menu-item-info"><h3 class="menu-item-name">Flat White</h3><p class="menu-item-desc">Ristretto shots with microfoam milk. A Melbourne staple, done our way.</p><p class="menu-item-price">₱125</p></div></div>
+          <div class="menu-item"><img class="menu-item-photo" src="IMGs/cortado.jpg" alt="Cortado coffee" /><div class="menu-item-info"><h3 class="menu-item-name">Cortado</h3><p class="menu-item-desc">Equal parts espresso and warm milk. Balanced and smooth.</p><p class="menu-item-price">₱115</p></div></div>
+          <div class="menu-item"><img class="menu-item-photo" src="IMGs/cappuccino.jpg" alt="Cappuccino coffee" /><div class="menu-item-info"><h3 class="menu-item-name">Cappuccino</h3><p class="menu-item-desc">Espresso, steamed milk, and thick velvety foam. Classic and comforting.</p><p class="menu-item-price">₱120</p></div></div>
+          <div class="menu-item"><img class="menu-item-photo" src="IMGs/milkandhoneylatte.jpg" alt="Milk and Honey Latte" /><div class="menu-item-info"><h3 class="menu-item-name">Milk &amp; Honey Latte <span class="menu-item-badge">Signature</span></h3><p class="menu-item-desc">Espresso with locally sourced honey and steamed oat milk. Warmth in a cup.</p><p class="menu-item-price">₱135</p></div></div>
+        </div>
+      </div>
+      <div id="tab-cold" class="tab-panel" role="tabpanel">
+        <div class="menu-grid">
+          <div class="menu-item"><img class="menu-item-photo" src="IMGs/icedamericano.jpg" alt="Iced Americano" /><div class="menu-item-info"><h3 class="menu-item-name">Iced Americano <span class="menu-item-badge">Bestseller</span></h3><p class="menu-item-desc">Double espresso poured over ice. Clean and refreshing.</p><p class="menu-item-price">₱105</p></div></div>
+          <div class="menu-item"><img class="menu-item-photo" src="IMGs/coldbrew.jpg" alt="Cold Brew coffee" /><div class="menu-item-info"><h3 class="menu-item-name">Cold Brew</h3><p class="menu-item-desc">Slow-steeped for 18 hours. Smooth, rich, naturally sweet.</p><p class="menu-item-price">₱145</p></div></div>
+          <div class="menu-item"><img class="menu-item-photo" src="IMGs/icedlatte.jpg" alt="Iced Latte" /><div class="menu-item-info"><h3 class="menu-item-name">Iced Latte</h3><p class="menu-item-desc">Espresso and milk over ice. Simple, satisfying, reliable.</p><p class="menu-item-price">₱125</p></div></div>
+          <div class="menu-item"><img class="menu-item-photo" src="IMGs/icedbrownsugarlatte.jpg" alt="Iced Brown Sugar Latte" /><div class="menu-item-info"><h3 class="menu-item-name">Iced Brown Sugar Latte <span class="menu-item-badge">New</span></h3><p class="menu-item-desc">Espresso shaken with brown sugar syrup and oat milk over ice.</p><p class="menu-item-price">₱145</p></div></div>
+          <div class="menu-item"><img class="menu-item-photo" src="IMGs/nitrocoldbrew.jpg" alt="Nitro Cold Brew" /><div class="menu-item-info"><h3 class="menu-item-name">Nitro Cold Brew</h3><p class="menu-item-desc">Cold brew infused with nitrogen. Silky, creamy, zero sugar.</p><p class="menu-item-price">₱165</p></div></div>
+          <div class="menu-item"><img class="menu-item-photo" src="IMGs/saltedcaramelcoldbrew.jpg" alt="Salted Caramel Cold Brew" /><div class="menu-item-info"><h3 class="menu-item-name">Salted Caramel Cold Brew</h3><p class="menu-item-desc">Cold brew with housemade salted caramel and milk foam.</p><p class="menu-item-price">₱155</p></div></div>
+        </div>
+      </div>
+      <div id="tab-non" class="tab-panel" role="tabpanel">
+        <div class="menu-grid">
+          <div class="menu-item"><img class="menu-item-photo" src="IMGs/kyotomatcha.jpg" alt="Kyoto Matcha latte" /><div class="menu-item-info"><h3 class="menu-item-name">Kyoto Matcha <span class="menu-item-badge">Signature</span></h3><p class="menu-item-desc">Ceremonial-grade matcha, oat milk, vanilla. Earthy and balanced.</p><p class="menu-item-price">₱145</p></div></div>
+          <div class="menu-item"><img class="menu-item-photo" src="IMGs/hojichalatte.jpg" alt="Hojicha Latte" /><div class="menu-item-info"><h3 class="menu-item-name">Hojicha Latte</h3><p class="menu-item-desc">Roasted green tea with steamed milk. Nutty and soothing.</p><p class="menu-item-price">₱135</p></div></div>
+          <div class="menu-item"><img class="menu-item-photo" src="IMGs/darkcocoalatte.jpg" alt="Dark Cocoa Latte" /><div class="menu-item-info"><h3 class="menu-item-name">Dark Cocoa Latte</h3><p class="menu-item-desc">70% dark cocoa with steamed oat milk and a pinch of sea salt.</p><p class="menu-item-price">₱130</p></div></div>
+          <div class="menu-item"><img class="menu-item-photo" src="IMGs/chamomilehoneytea.jpg"Chamomile Honey Tea" /><div class="menu-item-info"><h3 class="menu-item-name">Chamomile Honey Tea</h3><p class="menu-item-desc">Loose-leaf chamomile with raw honey and lemon. Gentle and calming.</p><p class="menu-item-price">₱110</p></div></div>
+        </div>
+      </div>
+      <div id="tab-food" class="tab-panel" role="tabpanel">
+        <div class="menu-grid">
+          <div class="menu-item"><img class="menu-item-photo" src="IMGs/buttercroissant.jpg" alt="Butter Croissant" /><div class="menu-item-info"><h3 class="menu-item-name">Butter Croissant</h3><p class="menu-item-desc">Layered, flaky, and perfectly golden. Baked fresh each morning.</p><p class="menu-item-price">₱75</p></div></div>
+          <div class="menu-item"><img class="menu-item-photo" src="IMGs/avocadotoast.jpg" alt="Avocado Toast on sourdough" /><div class="menu-item-info"><h3 class="menu-item-name">Avocado Toast <span class="menu-item-badge">Bestseller</span></h3><p class="menu-item-desc">Sourdough, smashed avocado, chili flakes, and a poached egg.</p><p class="menu-item-price">₱165</p></div></div>
+          <div class="menu-item"><img class="menu-item-photo" src="IMGs/brownbutterbananaloaf.jpg" alt="Brown Butter Banana Loaf" /><div class="menu-item-info"><h3 class="menu-item-name">Brown Butter Banana Loaf</h3><p class="menu-item-desc">Moist, dense, and full of depth. A Kapee staple since day one.</p><p class="menu-item-price">₱85</p></div></div>
+          <div class="menu-item"><img class="menu-item-photo" src="IMGs/grilledchickenpanini.jpg" alt="Grilled Chicken Panini" /><div class="menu-item-info"><h3 class="menu-item-name">Grilled Chicken Panini</h3><p class="menu-item-desc">Sourdough, pesto chicken, roasted tomatoes, and aged cheese.</p><p class="menu-item-price">₱185</p></div></div>
+          <div class="menu-item"><img class="menu-item-photo" src="IMGs/darkchocolatechipcookie.jpg" alt="Dark Choco Chip Cookie" /><div class="menu-item-info"><h3 class="menu-item-name">Dark Choco Chip Cookie <span class="menu-item-badge">New</span></h3><p class="menu-item-desc">Thick, chewy, and loaded with 70% dark chocolate. Still warm when served.</p><p class="menu-item-price">₱65</p></div></div>
+          <div class="menu-item"><img class="menu-item-photo" src="IMGs/quinoagrainbowl.jpg" alt="Quinoa Grain Bowl" /><div class="menu-item-info"><h3 class="menu-item-name">Quinoa Grain Bowl</h3><p class="menu-item-desc">Mixed grains, roasted veg, tahini, and seeds. Nourishing and filling.</p><p class="menu-item-price">₱195</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ══════════════════ PAGE: ABOUT ══════════════════ -->
+<main id="page-about" class="page" aria-label="About page">
+  <section class="about-hero">
+    <div class="about-hero-bg" role="img" aria-label="Interior of Kapee coffee shop"></div>
+    <div class="container about-hero-content">
+      <span class="section-label">Our Story</span>
+      <h1>Built on beans<br>and <em>belief.</em></h1>
+    </div>
+  </section>
+  <section class="container about-story" aria-labelledby="story-heading">
+    <div class="about-story-img">
+      <img src="IMGs/storybg.jfif" alt="Full story picture" loading="lazy" />
+    </div>
+    <div class="about-story-text">
+      <span class="section-label">How It Began</span>
+      <h2 class="section-title" id="story-heading">We started with one question:<br><em>what makes coffee great?</em></h2>
+      <p>Kapee was born in 2019 from a simple obsession — five friends who spent years drinking bad coffee in good cities, and decided enough was enough. They traveled to origin farms in Ethiopia, Colombia, and Sumatra. They learned to roast. They failed a lot. Then they found something worth sharing.</p>
+      <p>The first location opened in a 40-square-meter space with secondhand furniture and a single espresso machine. Word spread — not through ads, but through the work. Through the coffee.</p>
+      <p>Today Kapee operates multiple locations across Metro Manila, but the ethos remains the same: buy good beans, treat them well, and make drinks that give people pause.</p>
+    </div>
+  </section>
+  <div class="about-stats">
+    <div class="container">
+      <div class="stats-row">
+        <div class="stat-item"><p class="stat-num">2019</p><p class="stat-label">Year Founded</p></div>
+        <div class="stat-item"><p class="stat-num">12+</p><p class="stat-label">Bean Origins</p></div>
+        <div class="stat-item"><p class="stat-num">40K</p><p class="stat-label">Cups Served</p></div>
+        <div class="stat-item"><p class="stat-num">100%</p><p class="stat-label">Ethically Sourced</p></div>
+      </div>
+    </div>
+  </div>
+  <section class="about-values" aria-labelledby="values-heading">
+    <div class="container">
+      <span class="section-label">What Drives Us</span>
+      <h2 class="section-title" id="values-heading">Three things we never compromise on.</h2>
+      <div class="values-grid">
+        <div class="value-item"><p class="value-num">01</p><h3 class="value-title">Origin Transparency</h3><p class="value-text">We know exactly where every bean comes from — and we pay fair prices to the people who grow them. No shortcuts, no excuses.</p></div>
+        <div class="value-item"><p class="value-num">02</p><h3 class="value-title">Craft Over Speed</h3><p class="value-text">We don't rush. Each drink is made with intention. If that means a 4-minute latte, then 4 minutes it is.</p></div>
+        <div class="value-item"><p class="value-num">03</p><h3 class="value-title">Space for Everyone</h3><p class="value-text">Kapee is for the solo worker, the first date, the old friends catching up. We design every detail with all of them in mind.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ══════════════════ PAGE: LOCATIONS ══════════════════ -->
+<main id="page-locations" class="page" aria-label="Locations page">
+  <div class="locations-hero">
+    <div class="container">
+      <span class="section-label">Find Us</span>
+      <h1>Our Branches</h1>
+      <p>Eight locations across Metro Manila — each one designed with the same care we put into every cup.</p>
+    </div>
+  </div>
+  <section class="locations-section">
+    <div class="container">
+      <span class="section-label">All Locations</span>
+      <h2 class="section-title">Kapee is near you.</h2>
+      <p class="section-lead">Visit any branch and expect the same quality, the same warmth, and the same great coffee.</p>
+      <div class="locations-grid">
+
+        <!-- 1. Main Branch -->
+        <div class="location-card">
+          <span class="location-badge main">Main Branch</span>
+          <h3 class="location-name">Kapee Makati</h3>
+          <p class="location-area">Makati City</p>
+          <p class="location-address">123 Brew Street, Barangay Poblacion, Makati City, Metro Manila 1210</p>
+          <p class="location-hours"><strong>Hours:</strong> Mon–Fri 7AM–9PM · Sat–Sun 7AM–10PM</p>
+          <a href="https://maps.google.com/?q=Makati+City+Metro+Manila" target="_blank" rel="noopener" class="btn-maps" aria-label="Open Kapee Makati on Google Maps">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            Visit on Google Maps
+          </a>
+        </div>
+
+        <!-- 2 -->
+        <div class="location-card">
+          <span class="location-badge">Branch</span>
+          <h3 class="location-name">Kapee BGC</h3>
+          <p class="location-area">Bonifacio Global City, Taguig</p>
+          <p class="location-address">Unit 4B, The Rise Building, 11th Avenue Corner 39th Street, BGC, Taguig City 1634</p>
+          <p class="location-hours"><strong>Hours:</strong> Mon–Fri 7AM–9PM · Sat–Sun 8AM–10PM</p>
+          <a href="https://maps.google.com/?q=BGC+Taguig+City" target="_blank" rel="noopener" class="btn-maps" aria-label="Open Kapee BGC on Google Maps">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            Visit on Google Maps
+          </a>
+        </div>
+
+        <!-- 3 -->
+        <div class="location-card">
+          <span class="location-badge">Branch</span>
+          <h3 class="location-name">Kapee Ortigas</h3>
+          <p class="location-area">Ortigas Center, Pasig</p>
+          <p class="location-address">G/F Galleria Corporate Center, EDSA corner Ortigas Avenue, Ortigas Center, Pasig City 1605</p>
+          <p class="location-hours"><strong>Hours:</strong> Mon–Fri 6:30AM–9PM · Sat–Sun 8AM–9PM</p>
+          <a href="https://maps.google.com/?q=Ortigas+Center+Pasig+City" target="_blank" rel="noopener" class="btn-maps" aria-label="Open Kapee Ortigas on Google Maps">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            Visit on Google Maps
+          </a>
+        </div>
+
+        <!-- 4 -->
+        <div class="location-card">
+          <span class="location-badge">Branch</span>
+          <h3 class="location-name">Kapee Quezon City</h3>
+          <p class="location-area">Quezon City</p>
+          <p class="location-address">58 Maginhawa Street, Teachers Village East, Quezon City, Metro Manila 1101</p>
+          <p class="location-hours"><strong>Hours:</strong> Mon–Sun 7AM–10PM</p>
+          <a href="https://maps.google.com/?q=Maginhawa+Street+Quezon+City" target="_blank" rel="noopener" class="btn-maps" aria-label="Open Kapee Quezon City on Google Maps">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            Visit on Google Maps
+          </a>
+        </div>
+
+        <!-- 5 -->
+        <div class="location-card">
+          <span class="location-badge">Branch</span>
+          <h3 class="location-name">Kapee Alabang</h3>
+          <p class="location-area">Muntinlupa City</p>
+          <p class="location-address">2F Festival Supermall, Filinvest Corporate City, Alabang, Muntinlupa City 1780</p>
+          <p class="location-hours"><strong>Hours:</strong> Mon–Thu 8AM–9PM · Fri–Sun 8AM–10PM</p>
+          <a href="https://maps.google.com/?q=Alabang+Muntinlupa+City" target="_blank" rel="noopener" class="btn-maps" aria-label="Open Kapee Alabang on Google Maps">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            Visit on Google Maps
+          </a>
+        </div>
+
+        <!-- 6 -->
+        <div class="location-card">
+          <span class="location-badge">Branch</span>
+          <h3 class="location-name">Kapee Mandaluyong</h3>
+          <p class="location-area">Mandaluyong City</p>
+          <p class="location-address">Level 1, SM Megamall Building A, EDSA Corner Julia Vargas Avenue, Mandaluyong City 1550</p>
+          <p class="location-hours"><strong>Hours:</strong> Mon–Sun 8AM–9:30PM</p>
+          <a href="https://maps.google.com/?q=SM+Megamall+Mandaluyong" target="_blank" rel="noopener" class="btn-maps" aria-label="Open Kapee Mandaluyong on Google Maps">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            Visit on Google Maps
+          </a>
+        </div>
+
+        <!-- 7 -->
+        <div class="location-card">
+          <span class="location-badge">Branch</span>
+          <h3 class="location-name">Kapee Eastwood</h3>
+          <p class="location-area">Libis, Quezon City</p>
+          <p class="location-address">G/F Eastwood Mall, Eastwood City Cyberpark, E. Rodriguez Jr. Avenue, Libis, QC 1110</p>
+          <p class="location-hours"><strong>Hours:</strong> Mon–Sun 7AM–9PM</p>
+          <a href="https://maps.google.com/?q=Eastwood+City+Libis+Quezon+City" target="_blank" rel="noopener" class="btn-maps" aria-label="Open Kapee Eastwood on Google Maps">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            Visit on Google Maps
+          </a>
+        </div>
+
+        <!-- 8 -->
+        <div class="location-card">
+          <span class="location-badge">Branch</span>
+          <h3 class="location-name">Kapee Pasay</h3>
+          <p class="location-area">Pasay City</p>
+          <p class="location-address">3F SM Mall of Asia, J.W. Diokno Boulevard, Bay City, Pasay City, Metro Manila 1300</p>
+          <p class="location-hours"><strong>Hours:</strong> Mon–Thu 9AM–9PM · Fri–Sun 9AM–10PM</p>
+          <a href="https://maps.google.com/?q=SM+Mall+of+Asia+Pasay+City" target="_blank" rel="noopener" class="btn-maps" aria-label="Open Kapee Pasay on Google Maps">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            Visit on Google Maps
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ══════════════════ PAGE: CONTACT ══════════════════ -->
+<main id="page-contact" class="page" aria-label="Contact page">
+  <div class="contact-layout">
+    <div class="contact-info">
+      <span class="section-label">Get in Touch</span>
+      <h1>We'd love to<br><em>hear from you.</em></h1>
+      <p>Whether it's a question about our menu, a collaboration idea, or feedback — we're here and we reply within 24 hours.</p>
+      <div class="contact-detail">
+        <div class="contact-detail-icon" aria-hidden="true">📍</div>
+        <div class="contact-detail-text"><strong>Main Branch</strong><span>123 Brew Street, Makati City, Metro Manila</span></div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon" aria-hidden="true">🕐</div>
+        <div class="contact-detail-text"><strong>Hours</strong><span>Mon–Fri 7AM–9PM · Sat–Sun 7AM–10PM</span></div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon" aria-hidden="true">✉️</div>
+        <div class="contact-detail-text"><strong>Email</strong><span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="93fbf6fffffcd3f8f2e3f6f6bdf0fc">kapeeofficial@gmail.com</a></span></div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon" aria-hidden="true">📞</div>
+        <div class="contact-detail-text"><strong>Phone</strong><span>+63 912 345 6789</span></div>
+      </div>
+    </div>
+    <div class="contact-form-wrap">
+      <h2 id="feedback-heading">Send us a message</h2>
+      <div id="contactFormWrap">
+        <form id="contactForm" novalidate aria-label="Contact form" aria-labelledby="feedback-heading">
+          <div class="form-row">
+            <div class="form-group" id="fg-name">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Juan dela Cruz" autocomplete="name" />
+              <p class="err-msg" role="alert">Please enter your name (min. 2 characters).</p>
+            </div>
+            <div class="form-group" id="fg-email">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="juan@email.com" autocomplete="email" />
+              <p class="err-msg" role="alert">Please enter a valid email address.</p>
+            </div>
+          </div>
+          <div class="form-group" id="fg-subject">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject">
+              <option value="">Select a topic…</option>
+              <option value="general">General Inquiry</option>
+              <option value="order">Order / Catering</option>
+              <option value="collab">Collaboration</option>
+              <option value="feedback">Feedback / Review</option>
+              <option value="other">Other</option>
+            </select>
+            <p class="err-msg" role="alert">Please select a topic.</p>
+          </div>
+          <div class="form-group" id="fg-message">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us what's on your mind…"></textarea>
+            <p class="err-msg" role="alert">Please enter a message (min. 10 characters).</p>
+          </div>
+          <button type="submit" class="form-submit">Send Message</button>
+        </form>
+      </div>
+      <div class="form-success" id="formSuccess" aria-live="polite">
+        <div class="success-icon">☕</div>
+        <h3>Message Received!</h3>
+        <p>Thank you for reaching out. We'll get back to you within 24 hours. In the meantime, come visit us for a cup.</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ══════════════════ PAGE: ORDER ══════════════════ -->
+<main id="page-order" class="page" aria-label="Order page">
+  <div class="order-page-wrap">
+
+    <!-- Left: Menu to order from -->
+    <div class="order-menu-panel">
+      <div class="order-hero">
+        <h1>Order from Kapee</h1>
+        <p>Pick your items, choose delivery or pickup, and we'll handle the rest.</p>
+      </div>
+      <div class="order-cat-bar" role="tablist" aria-label="Order categories">
+        <button class="order-cat-btn active" role="tab" aria-selected="true" onclick="switchOrderCat(this,'ocat-espresso')">☕ Espresso</button>
+        <button class="order-cat-btn" role="tab" aria-selected="false" onclick="switchOrderCat(this,'ocat-cold')">🧊 Cold Drinks</button>
+        <button class="order-cat-btn" role="tab" aria-selected="false" onclick="switchOrderCat(this,'ocat-non')">🍵 Non-Coffee</button>
+        <button class="order-cat-btn" role="tab" aria-selected="false" onclick="switchOrderCat(this,'ocat-food')">🍞 Food</button>
+      </div>
+      <div class="order-items-wrap">
+
+        <!-- Espresso -->
+        <div id="ocat-espresso" class="order-cat-section active" role="tabpanel">
+          <h2 class="order-cat-title">Espresso</h2>
+          <div class="order-items-grid">
+            <div class="order-item-card">
+              <div class="order-item-photo-wrap"><img src="IMGs/kapeeclassic.jpg" alt="Kapee Classic espresso" /><span class="menu-item-badge order-item-badge-overlay">Bestseller</span></div>
+              <div class="order-item-body"><p class="order-item-name">Kapee Classic</p><p class="order-item-desc">Double-shot espresso with deep chocolate and caramel notes.</p><div class="order-item-footer"><span class="order-item-price">₱95</span><button class="add-to-cart-btn" onclick="addToCart('Kapee Classic',95,'☕')"><span class="plus">+</span> Add</button></div></div>
+            </div>
+            <div class="order-item-card">
+              <div class="order-item-photo-wrap"><img src="IMGs/americano.jpg" alt="Americano coffee" /></div>
+              <div class="order-item-body"><p class="order-item-name">Americano</p><p class="order-item-desc">Espresso diluted with hot water. Full-bodied, minimal, and perfect.</p><div class="order-item-footer"><span class="order-item-price">₱95</span><button class="add-to-cart-btn" onclick="addToCart('Americano',95,'☕')"><span class="plus">+</span> Add</button></div></div>
+            </div>
+            <div class="order-item-card">
+              <div class="order-item-photo-wrap"><img src="IMGs/flatwhite.jpg" alt="Flat White coffee" /></div>
+              <div class="order-item-body"><p class="order-item-name">Flat White</p><p class="order-item-desc">Ristretto shots with microfoam milk. A Melbourne staple, done our way.</p><div class="order-item-footer"><span class="order-item-price">₱125</span><button class="add-to-cart-btn" onclick="addToCart('Flat White',125,'☕')"><span class="plus">+</span> Add</button></div></div>
+            </div>
+            <div class="order-item-card">
+              <div class="order-item-photo-wrap"><img src="IMGs/cortado.jpg" alt="Cortado coffee" /></div>
+              <div class="order-item-body"><p class="order-item-name">Cortado</p><p class="order-item-desc">Equal parts espresso and warm milk. Balanced and smooth.</p><div class="order-item-footer"><span class="order-item-price">₱115</span><button class="add-to-cart-btn" onclick="addToCart('Cortado',115,'☕')"><span class="plus">+</span> Add</button></div></div>
+            </div>
+            <div class="order-item-card">
+              <div class="order-item-photo-wrap"><img src="IMGs/cappuccino.jpg" alt="Cappuccino coffee" /></div>
+              <div class="order-item-body"><p class="order-item-name">Cappuccino</p><p class="order-item-desc">Espresso, steamed milk, and thick velvety foam.</p><div class="order-item-footer"><span class="order-item-price">₱120</span><button class="add-to-cart-btn" onclick="addToCart('Cappuccino',120,'☕')"><span class="plus">+</span> Add</button></div></div>
+            </div>
+            <div class="order-item-card">
+              <div class="order-item-photo-wrap"><img src="IMGs/milkandhoneylatte.jpg" alt="Milk and Honey Latte" /><span class="menu-item-badge order-item-badge-overlay">Signature</span></div>
+              <div class="order-item-body"><p class="order-item-name">Milk &amp; Honey Latte</p><p class="order-item-desc">Espresso with honey and steamed oat milk. Warmth in a cup.</p><div class="order-item-footer"><span class="order-item-price">₱135</span><button class="add-to-cart-btn" onclick="addToCart('Milk & Honey Latte',135,'☕')"><span class="plus">+</span> Add</button></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cold Drinks -->
+        <div id="ocat-cold" class="order-cat-section" role="tabpanel">
+          <h2 class="order-cat-title">Cold Drinks</h2>
+          <div class="order-items-grid">
+            <div class="order-item-card">
+              <div class="order-item-photo-wrap"><img src="IMGs/icedamericano.jpg" alt="Iced Americano" /><span class="menu-item-badge order-item-badge-overlay">Bestseller</span></div>
+              <div class="order-item-body"><p class="order-item-name">Iced Americano</p><p class="order-item-desc">Double espresso poured over ice. Clean and refreshing.</p><div class="order-item-footer"><span class="order-item-price">₱105</span><button class="add-to-cart-btn" onclick="addToCart('Iced Americano',105,'🧊')"><span class="plus">+</span> Add</button></div></div>
+            </div>
+            <div class="order-item-card">
+              <div class="order-item-photo-wrap"><img src="IMGs/coldbrew.jpg" alt="Cold Brew coffee" /></div>
+              <div class="order-item-body"><p class="order-item-name">Cold Brew</p><p class="order-item-desc">Slow-steeped for 18 hours. Smooth, rich, naturally sweet.</p><div class="order-item-footer"><span class="order-item-price">₱145</span><button class="add-to-cart-btn" onclick="addToCart('Cold Brew',145,'🧊')"><span class="plus">+</span> Add</button></div></div>
+            </div>
+            <div class="order-item-card">
+              <div class="order-item-photo-wrap"><img src="IMGs/icedlatte.jpg" alt="Iced Latte" /></div>
+              <div class="order-item-body"><p class="order-item-name">Iced Latte</p><p class="order-item-desc">Espresso and milk over ice. Simple, satisfying, reliable.</p><div class="order-item-footer"><span class="order-item-price">₱125</span><button class="add-to-cart-btn" onclick="addToCart('Iced Latte',125,'🧊')"><span class="plus">+</span> Add</button></div></div>
+            </div>
+            <div class="order-item-card">
+              <div class="order-item-photo-wrap"><img src="IMGs/icedbrownsugarlatte.jpg" alt="Iced Brown Sugar Latte" /><span class="menu-item-badge order-item-badge-overlay">New</span></div>
+              <div class="order-item-body"><p class="order-item-name">Iced Brown Sugar Latte</p><p class="order-item-desc">Espresso shaken with brown sugar syrup and oat milk over ice.</p><div class="order-item-footer"><span class="order-item-price">₱145</span><button class="add-to-cart-btn" onclick="addToCart('Iced Brown Sugar Latte',145,'🧊')"><span class="plus">+</span> Add</button></div></div>
+            </div>
+            <div class="order-item-card">
+              <div class="order-item-photo-wrap"><img src="IMGs/nitrocoldbrew.jpg" alt="Nitro Cold Brew" /></div>
+              <div class="order-item-body"><p class="order-item-name">Nitro Cold Brew</p><p class="order-item-desc">Cold brew infused with nitrogen. Silky, creamy, zero sugar.</p><div class="order-item-footer"><span class="order-item-price">₱165</span><button class="add-to-cart-btn" onclick="addToCart('Nitro Cold Brew',165,'🧊')"><span class="plus">+</span> Add</button></div></div>
+            </div>
+            <div class="order-item-card">
+              <div class="order-item-photo-wrap"><img src="IMGs/saltedcaramelcoldbrew.jpg" alt="Salted Caramel Cold Brew" /></div>
+              <div class="order-item-body"><p class="order-item-name">Salted Caramel Cold Brew</p><p class="order-item-desc">Cold brew with housemade salted caramel and milk foam.</p><div class="order-item-footer"><span class="order-item-price">₱155</span><button class="add-to-cart-btn" onclick="addToCart('Salted Caramel Cold Brew',155,'🧊')"><span class="plus">+</span> Add</button></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Non-Coffee -->
+        <div id="ocat-non" class="order-cat-section" role="tabpanel">
+          <h2 class="order-cat-title">Non-Coffee</h2>
+          <div class="order-items-grid">
+            <div class="order-item-card">
+              <div class="order-item-photo-wrap"><img src="IMGs/kyotomatcha.jpg" alt="Kyoto Matcha latte" /><span class="menu-item-badge order-item-badge-overlay">Signature</span></div>
+              <div class="order-item-body"><p class="order-item-name">Kyoto Matcha</p><p class="order-item-desc">Ceremonial-grade matcha, oat milk, vanilla. Earthy and balanced.</p><div class="order-item-footer"><span class="order-item-price">₱145</span><button class="add-to-cart-btn" onclick="addToCart('Kyoto Matcha',145,'🍵')"><span class="plus">+</span> Add</button></div></div>
+            </div>
+            <div class="order-item-card">
+              <div class="order-item-photo-wrap"><img src="IMGs/hojichalatte.jpg" alt="Hojicha Latte" /></div>
+              <div class="order-item-body"><p class="order-item-name">Hojicha Latte</p><p class="order-item-desc">Roasted green tea with steamed milk. Nutty and soothing.</p><div class="order-item-footer"><span class="order-item-price">₱135</span><button class="add-to-cart-btn" onclick="addToCart('Hojicha Latte',135,'🍵')"><span class="plus">+</span> Add</button></div></div>
+            </div>
+            <div class="order-item-card">
+              <div class="order-item-photo-wrap"><img src="IMGs/darkcocoalatte.jpg" alt="Dark Cocoa Latte" /></div>
+              <div class="order-item-body"><p class="order-item-name">Dark Cocoa Latte</p><p class="order-item-desc">70% dark cocoa with steamed oat milk and a pinch of sea salt.</p><div class="order-item-footer"><span class="order-item-price">₱130</span><button class="add-to-cart-btn" onclick="addToCart('Dark Cocoa Latte',130,'🍫')"><span class="plus">+</span> Add</button></div></div>
+            </div>
+            <div class="order-item-card">
+              <div class="order-item-photo-wrap"><img src="IMGs/chamomilehoneytea.jpg" alt="Chamomile Honey Tea" /></div>
+              <div class="order-item-body"><p class="order-item-name">Chamomile Honey Tea</p><p class="order-item-desc">Loose-leaf chamomile with raw honey and lemon. Gentle and calming.</p><div class="order-item-footer"><span class="order-item-price">₱110</span><button class="add-to-cart-btn" onclick="addToCart('Chamomile Honey Tea',110,'🌿')"><span class="plus">+</span> Add</button></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Food -->
+        <div id="ocat-food" class="order-cat-section" role="tabpanel">
+          <h2 class="order-cat-title">Food</h2>
+          <div class="order-items-grid">
+            <div class="order-item-card">
+              <div class="order-item-photo-wrap"><img src="IMGs/buttercroissant.jpg" alt="Butter Croissant" /></div>
+              <div class="order-item-body"><p class="order-item-name">Butter Croissant</p><p class="order-item-desc">Layered, flaky, and perfectly golden. Baked fresh each morning.</p><div class="order-item-footer"><span class="order-item-price">₱75</span><button class="add-to-cart-btn" onclick="addToCart('Butter Croissant',75,'🥐')"><span class="plus">+</span> Add</button></div></div>
+            </div>
+            <div class="order-item-card">
+              <div class="order-item-photo-wrap"><img src="IMGs/avocadotoast.jpg" alt="Avocado Toast on sourdough" /><span class="menu-item-badge order-item-badge-overlay">Bestseller</span></div>
+              <div class="order-item-body"><p class="order-item-name">Avocado Toast</p><p class="order-item-desc">Sourdough, smashed avocado, chili flakes, and a poached egg.</p><div class="order-item-footer"><span class="order-item-price">₱165</span><button class="add-to-cart-btn" onclick="addToCart('Avocado Toast',165,'🍞')"><span class="plus">+</span> Add</button></div></div>
+            </div>
+            <div class="order-item-card">
+              <div class="order-item-photo-wrap"><img src="IMGs/brownbutterbananaloaf.jpg" alt="Brown Butter Banana Loaf" /></div>
+              <div class="order-item-body"><p class="order-item-name">Banana Butter Loaf</p><p class="order-item-desc">Moist, dense, and full of depth. A Kapee staple since day one.</p><div class="order-item-footer"><span class="order-item-price">₱85</span><button class="add-to-cart-btn" onclick="addToCart('Banana Butter Loaf',85,'🧁')"><span class="plus">+</span> Add</button></div></div>
+            </div>
+            <div class="order-item-card">
+              <div class="order-item-photo-wrap"><img src="IMGs/grilledchickenpanini.jpg" alt="Grilled Chicken Panini" /></div>
+              <div class="order-item-body"><p class="order-item-name">Grilled Chicken Panini</p><p class="order-item-desc">Sourdough, pesto chicken, roasted tomatoes, and aged cheese.</p><div class="order-item-footer"><span class="order-item-price">₱185</span><button class="add-to-cart-btn" onclick="addToCart('Grilled Chicken Panini',185,'🥪')"><span class="plus">+</span> Add</button></div></div>
+            </div>
+            <div class="order-item-card">
+              <div class="order-item-photo-wrap"><img src="IMGs/darkchocolatechipcookie.jpg" alt="Dark Choco Chip Cookie" /><span class="menu-item-badge order-item-badge-overlay">New</span></div>
+              <div class="order-item-body"><p class="order-item-name">Dark Choco Chip Cookie</p><p class="order-item-desc">Thick, chewy, loaded with 70% dark chocolate. Still warm when served.</p><div class="order-item-footer"><span class="order-item-price">₱65</span><button class="add-to-cart-btn" onclick="addToCart('Dark Choco Chip Cookie',65,'🍪')"><span class="plus">+</span> Add</button></div></div>
+            </div>
+            <div class="order-item-card">
+              <div class="order-item-photo-wrap"><img src="IMGs/quinoagrainbowl.jpg" alt="Quinoa Grain Bowl" /></div>
+              <div class="order-item-body"><p class="order-item-name">Quinoa Grain Bowl</p><p class="order-item-desc">Mixed grains, roasted veg, tahini, and seeds. Nourishing and filling.</p><div class="order-item-footer"><span class="order-item-price">₱195</span><button class="add-to-cart-btn" onclick="addToCart('Quinoa Grain Bowl',195,'🥗')"><span class="plus">+</span> Add</button></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- end order-menu-panel -->
+
+    <!-- Right: Cart sidebar -->
+    <aside class="order-cart-panel" aria-label="Your cart">
+      <div class="cart-header">
+        <h2>Your Order</h2>
+        <span class="cart-count" id="cartCount">0</span>
+      </div>
+      <div class="cart-empty" id="cartEmpty">
+        <div class="cart-empty-icon">🛒</div>
+        <p>Your cart is empty.<br>Add items from the menu to get started.</p>
+      </div>
+      <div class="cart-items-list" id="cartItemsList" style="display:none;"></div>
+      <div class="cart-footer" id="cartFooter" style="display:none;">
+        <div class="cart-totals">
+          <div class="cart-row subtotal"><span>Subtotal</span><span id="cartSubtotal">₱0</span></div>
+          <div class="cart-row delivery"><span>Delivery fee</span><span id="cartDeliveryFee">₱50</span></div>
+          <div class="cart-row total"><span>Total</span><span id="cartTotal">₱50</span></div>
+        </div>
+        <button class="cart-checkout-btn" id="cartCheckoutBtn" onclick="openCheckout()">Proceed to Checkout</button>
+      </div>
+    </aside>
+
+  </div><!-- end order-page-wrap -->
+
+  <!-- Mobile floating cart button -->
+  <button class="mobile-cart-fab" id="mobileFab" onclick="openCheckout()" style="display:none;" aria-label="View cart">
+    🛒 View Cart <span class="fab-count" id="fabCount">0</span>
+  </button>
+</main>
+
+<!-- ══════════════════ CHECKOUT OVERLAY ══════════════════ -->
+<div class="checkout-overlay" id="checkoutOverlay" role="dialog" aria-modal="true" aria-label="Checkout">
+  <div class="checkout-sheet">
+    <div class="checkout-sheet-header">
+      <h2 id="checkoutTitle">Review Order</h2>
+      <button class="checkout-close-btn" onclick="closeCheckout()" aria-label="Close checkout">&times;</button>
+    </div>
+    <div class="checkout-body">
+      <!-- Step indicators -->
+      <div class="step-indicator" id="stepIndicator">
+        <div class="step-dot active" id="sdot1"><span class="dot-num">1</span> Order</div>
+        <div class="step-dot" id="sdot2"><span class="dot-num">2</span> Delivery</div>
+        <div class="step-dot" id="sdot3"><span class="dot-num">3</span> Confirm</div>
+      </div>
+
+      <!-- Step 1: Order Review -->
+      <div class="checkout-step active" id="cstep1">
+        <div id="checkoutItemsList"></div>
+        <div class="checkout-totals-block">
+          <div class="cart-row subtotal"><span>Subtotal</span><span id="co-subtotal">₱0</span></div>
+          <div class="cart-row delivery"><span>Delivery fee</span><span id="co-delivery">₱50</span></div>
+          <div class="cart-row total"><span>Total</span><span id="co-total">₱50</span></div>
+        </div>
+      </div>
+
+      <!-- Step 2: Delivery Details -->
+      <div class="checkout-step" id="cstep2">
+        <div class="delivery-toggle">
+          <button class="delivery-toggle-btn active" id="deliveryBtn" onclick="setMode('delivery')">🛵 Delivery</button>
+          <button class="delivery-toggle-btn" id="pickupBtn" onclick="setMode('pickup')">🏠 Pickup</button>
+        </div>
+
+        <!-- Delivery fields -->
+        <div class="delivery-fields show" id="deliveryFields">
+          <div class="co-form-row">
+            <div class="co-form-group" id="cfg-fname">
+              <label for="co-fname">First Name</label>
+              <input type="text" id="co-fname" placeholder="Juan" autocomplete="given-name" />
+              <p class="co-err-msg">Required.</p>
+            </div>
+            <div class="co-form-group" id="cfg-lname">
+              <label for="co-lname">Last Name</label>
+              <input type="text" id="co-lname" placeholder="dela Cruz" autocomplete="family-name" />
+              <p class="co-err-msg">Required.</p>
+            </div>
+          </div>
+          <div class="co-form-group" id="cfg-phone">
+            <label for="co-phone">Mobile Number</label>
+            <input type="tel" id="co-phone" placeholder="+63 912 345 6789" autocomplete="tel" />
+            <p class="co-err-msg">Please enter a valid PH mobile number.</p>
+          </div>
+          <div class="co-form-group" id="cfg-address">
+            <label for="co-address">Full Address</label>
+            <input type="text" id="co-address" placeholder="Unit / House No., Street Name, Barangay" autocomplete="street-address" />
+            <p class="co-err-msg">Please enter your address.</p>
+          </div>
+          <div class="co-form-row">
+            <div class="co-form-group" id="cfg-city">
+              <label for="co-city">City</label>
+              <select id="co-city">
+                <option value="">Select city…</option>
+                <option>Makati City</option>
+                <option>Taguig City (BGC)</option>
+                <option>Pasig City (Ortigas)</option>
+                <option>Quezon City</option>
+                <option>Muntinlupa (Alabang)</option>
+                <option>Mandaluyong City</option>
+                <option>Pasay City</option>
+                <option>Other</option>
+              </select>
+              <p class="co-err-msg">Required.</p>
+            </div>
+            <div class="co-form-group">
+              <label for="co-notes">Notes (optional)</label>
+              <input type="text" id="co-notes" placeholder="e.g. Leave at door" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Pickup fields -->
+        <div class="pickup-fields" id="pickupFields">
+          <div class="co-form-row">
+            <div class="co-form-group" id="cfg-pfname">
+              <label for="co-pfname">First Name</label>
+              <input type="text" id="co-pfname" placeholder="Juan" autocomplete="given-name" />
+              <p class="co-err-msg">Required.</p>
+            </div>
+            <div class="co-form-group" id="cfg-plname">
+              <label for="co-plname">Last Name</label>
+              <input type="text" id="co-plname" placeholder="dela Cruz" autocomplete="family-name" />
+              <p class="co-err-msg">Required.</p>
+            </div>
+          </div>
+          <div class="co-form-group" id="cfg-pphone">
+            <label for="co-pphone">Mobile Number</label>
+            <input type="tel" id="co-pphone" placeholder="+63 912 345 6789" autocomplete="tel" />
+            <p class="co-err-msg">Please enter a valid PH mobile number.</p>
+          </div>
+          <div class="co-form-group" id="cfg-branch">
+            <label for="co-branch">Pickup Branch</label>
+            <select id="co-branch">
+              <option value="">Select branch…</option>
+              <option>Kapee Makati (Main)</option>
+              <option>Kapee BGC</option>
+              <option>Kapee Ortigas</option>
+              <option>Kapee Quezon City</option>
+              <option>Kapee Alabang</option>
+              <option>Kapee Mandaluyong</option>
+              <option>Kapee Eastwood</option>
+              <option>Kapee Pasay</option>
+            </select>
+            <p class="co-err-msg">Please select a branch.</p>
+          </div>
+          <div class="co-form-group">
+            <label for="co-pnotes">Notes (optional)</label>
+            <input type="text" id="co-pnotes" placeholder="e.g. I'll arrive at 3PM" />
+          </div>
+        </div>
+
+        <!-- Payment -->
+        <span class="co-section-label">Payment Method</span>
+        <div class="payment-options" id="paymentOptions">
+          <div class="payment-opt selected" data-pay="cod" onclick="selectPay(this)">
+            <div class="pay-icon">💵</div>
+            <div class="pay-name">Cash on Delivery</div>
+          </div>
+          <div class="payment-opt" data-pay="gcash" onclick="selectPay(this)">
+            <div class="pay-icon">📱</div>
+            <div class="pay-name">GCash</div>
+          </div>
+          <div class="payment-opt" data-pay="card" onclick="selectPay(this)">
+            <div class="pay-icon">💳</div>
+            <div class="pay-name">Credit / Debit</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3: Confirmation -->
+      <div class="checkout-step" id="cstep3">
+        <div class="order-confirm">
+          <div class="order-confirm-icon">☕</div>
+          <h3>Order Placed!</h3>
+          <p class="order-number" id="orderNumber">Order #KAP-00000</p>
+          <p>Your order has been received and is being prepared by our team. You'll receive a confirmation on your mobile shortly.</p>
+          <br>
+          <div class="order-eta" id="orderEta">🛵 Estimated delivery: 30–45 mins</div>
+          <button class="btn-primary" onclick="closeCheckout();showPage('home');" style="margin-top:0.5rem;">Back to Home</button>
+        </div>
+      </div>
+
+    </div><!-- end checkout-body -->
+
+    <div class="checkout-sheet-footer" id="checkoutFooter">
+      <button class="checkout-back-btn" id="checkoutBackBtn" onclick="checkoutBack()" style="display:none;">Back</button>
+      <button class="checkout-next-btn" id="checkoutNextBtn" onclick="checkoutNext()">Continue to Delivery →</button>
+    </div>
+  </div>
+</div>
+
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="nav-logo">Ka<span>p</span>ee</span>
+        <p>Coffee, crafted with care. A space for slow mornings and good conversations.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <a href="#" onclick="showPage('home');return false;">Home</a>
+        <a href="#" onclick="showPage('menu');return false;">Menu</a>
+        <a href="#" onclick="showPage('about');return false;">About</a>
+        <a href="#" onclick="showPage('locations');return false;">Locations</a>
+        <a href="#" onclick="showPage('contact');return false;">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="footer-social-grid">
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Kapee on Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            <span>Facebook</span>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Kapee on Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <span>Instagram</span>
+          </a>
+          <a href="https://threads.net" target="_blank" rel="noopener" class="footer-social-link" aria-label="Kapee on Threads">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.474 12.01v-.017c.024-3.579 .875-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.594 12c.022 3.089.714 5.5 2.057 7.166 1.427 1.783 3.629 2.698 6.54 2.717 1.318-.009 2.499-.214 3.52-.607 1.179-.447 2.11-1.139 2.767-2.056.713-.987 1.124-2.21 1.217-3.627-1.027.12-2.12.176-3.257.156-1.176-.022-2.252-.167-3.215-.431-1.073-.295-1.993-.78-2.737-1.444-.806-.719-1.339-1.643-1.583-2.748a6.918 6.918 0 0 1-.13-2.156c.169-1.582.87-2.876 2.083-3.846 1.169-.936 2.729-1.42 4.64-1.436 1.481.012 2.76.305 3.797.87.952.52 1.685 1.249 2.183 2.168.392.723.614 1.554.659 2.469.046.927.007 1.85-.115 2.747-.244 1.769-.862 3.253-1.836 4.41-1.094 1.303-2.614 2.103-4.513 2.379-.457.065-.927.1-1.407.1z"/></svg>
+            <span>Threads</span>
+          </a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Kapee on TikTok">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
+            <span>TikTok</span>
+          </a>
+          <a href="https://x.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Kapee on X">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            <span>X (Twitter)</span>
+          </a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Kapee on YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon fill="white" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+            <span>YouTube</span>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Visit Us</h4>
+        <a href="#">123 Brew St, Makati</a>
+        <a href="#">Mon–Fri 7AM–9PM</a>
+        <a href="#">Sat–Sun 7AM–10PM</a>
+        <a href="#"><span class="__cf_email__" data-cfemail="d8b0bdb4b4b798b3b9a8bdbdf6bbb7">kapeeofficial@gmail.com</span></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Kapee Coffee. All rights reserved.</p>
+      <div class="social-row">
+        <a href="https://facebook.com" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://threads.net" target="_blank" rel="noopener" class="social-link" aria-label="Threads">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.474 12.01v-.017c.024-3.579 .875-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.594 12c.022 3.089.714 5.5 2.057 7.166 1.427 1.783 3.629 2.698 6.54 2.717 1.318-.009 2.499-.214 3.52-.607 1.179-.447 2.11-1.139 2.767-2.056.713-.987 1.124-2.21 1.217-3.627-1.027.12-2.12.176-3.257.156-1.176-.022-2.252-.167-3.215-.431-1.073-.295-1.993-.78-2.737-1.444-.806-.719-1.339-1.643-1.583-2.748a6.918 6.918 0 0 1-.13-2.156c.169-1.582.87-2.876 2.083-3.846 1.169-.936 2.729-1.42 4.64-1.436 1.481.012 2.76.305 3.797.87.952.52 1.685 1.249 2.183 2.168.392.723.614 1.554.659 2.469.046.927.007 1.85-.115 2.747-.244 1.769-.862 3.253-1.836 4.41-1.094 1.303-2.614 2.103-4.513 2.379-.457.065-.927.1-1.407.1z"/></svg>
+        </a>
+        <a href="https://tiktok.com" target="_blank" rel="noopener" class="social-link" aria-label="TikTok">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
+        </a>
+        <a href="https://x.com" target="_blank" rel="noopener" class="social-link" aria-label="X">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="https://youtube.com" target="_blank" rel="noopener" class="social-link" aria-label="YouTube">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon fill="white" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  /* ── Page Switcher ── */
+  function showPage(id) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('page-' + id).classList.add('active');
+    document.querySelectorAll('.nav-links a[data-page]').forEach(a => {
+      a.classList.toggle('active', a.dataset.page === id);
+    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  /* ── Scroll to feedback form ── */
+  function scrollToFeedback() {
+    setTimeout(() => {
+      const el = document.getElementById('feedback-heading');
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const subj = document.getElementById('subject');
+      if (subj) subj.value = 'feedback';
+    }, 400);
+  }
+
+  /* ── Mobile Drawer ── */
+  const toggle = document.getElementById('navToggle');
+  const drawer = document.getElementById('navDrawer');
+  toggle.addEventListener('click', () => {
+    const open = toggle.classList.toggle('open');
+    drawer.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', open);
+  });
+  function closeDrawer() {
+    toggle.classList.remove('open');
+    drawer.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
+
+  /* ── Navbar scroll shadow ── */
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 10);
+  });
+
+  /* ── Menu Tabs ── */
+  function switchTab(btn, panelId) {
+    document.querySelectorAll('.tab-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    btn.setAttribute('aria-selected', 'true');
+    document.getElementById(panelId).classList.add('active');
+  }
+
+
+  /* ══ ORDER / CART LOGIC ══ */
+  let cart = []; // [{id, name, price, icon, qty}]
+  let orderMode = 'delivery'; // 'delivery' | 'pickup'
+  let selectedPayment = 'cod';
+  let checkoutStep = 1;
+  const DELIVERY_FEE = 50;
+
+  function addToCart(name, price, icon) {
+    const existing = cart.find(i => i.name === name);
+    if (existing) { existing.qty++; }
+    else { cart.push({ id: Date.now(), name, price, icon, qty: 1 }); }
+    renderCart();
+  }
+
+  function changeQty(id, delta) {
+    const item = cart.find(i => i.id === id);
+    if (!item) return;
+    item.qty += delta;
+    if (item.qty <= 0) cart = cart.filter(i => i.id !== id);
+    renderCart();
+  }
+
+  function removeFromCart(id) {
+    cart = cart.filter(i => i.id !== id);
+    renderCart();
+  }
+
+  function getSubtotal() { return cart.reduce((s, i) => s + i.price * i.qty, 0); }
+  function getTotal() { return getSubtotal() + (cart.length ? DELIVERY_FEE : 0); }
+  function fmt(n) { return '₱' + n.toLocaleString(); }
+
+  function renderCart() {
+    const count = cart.reduce((s, i) => s + i.qty, 0);
+    const sub = getSubtotal();
+    const total = getTotal();
+
+    // Sidebar
+    document.getElementById('cartCount').textContent = count;
+    const empty = document.getElementById('cartEmpty');
+    const list = document.getElementById('cartItemsList');
+    const footer = document.getElementById('cartFooter');
+    if (cart.length === 0) {
+      empty.style.display = 'flex'; list.style.display = 'none'; footer.style.display = 'none';
+    } else {
+      empty.style.display = 'none'; list.style.display = 'block'; footer.style.display = 'block';
+      list.innerHTML = cart.map(i => `
+        <div class="cart-item">
+          <span class="cart-item-icon">${i.icon}</span>
+          <div class="cart-item-info">
+            <p class="cart-item-name">${i.name}</p>
+            <p class="cart-item-unit">${fmt(i.price)} each</p>
+            <div class="cart-item-controls">
+              <button class="qty-btn" onclick="changeQty(${i.id},-1)" aria-label="Decrease quantity">−</button>
+              <span class="qty-val">${i.qty}</span>
+              <button class="qty-btn" onclick="changeQty(${i.id},1)" aria-label="Increase quantity">+</button>
+            </div>
+          </div>
+          <div class="cart-item-right">
+            <span class="cart-item-total">${fmt(i.price * i.qty)}</span>
+            <button class="remove-btn" onclick="removeFromCart(${i.id})" aria-label="Remove item">Remove</button>
+          </div>
+        </div>`).join('');
+      document.getElementById('cartSubtotal').textContent = fmt(sub);
+      document.getElementById('cartDeliveryFee').textContent = fmt(DELIVERY_FEE);
+      document.getElementById('cartTotal').textContent = fmt(total);
+    }
+
+    // Mobile FAB
+    const fab = document.getElementById('mobileFab');
+    if (count > 0) { fab.style.display = 'flex'; document.getElementById('fabCount').textContent = count; }
+    else { fab.style.display = 'none'; }
+  }
+
+  /* ── Order category tabs ── */
+  function switchOrderCat(btn, panelId) {
+    document.querySelectorAll('.order-cat-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+    document.querySelectorAll('.order-cat-section').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active'); btn.setAttribute('aria-selected','true');
+    document.getElementById(panelId).classList.add('active');
+  }
+
+  /* ── Checkout Overlay ── */
+  function openCheckout() {
+    if (cart.length === 0) return;
+    checkoutStep = 1;
+    renderCheckoutStep();
+    document.getElementById('checkoutOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeCheckout() {
+    document.getElementById('checkoutOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  // Close overlay on backdrop click
+  document.getElementById('checkoutOverlay').addEventListener('click', function(e) {
+    if (e.target === this) closeCheckout();
+  });
+
+  function renderCheckoutStep() {
+    // Steps visibility
+    [1,2,3].forEach(n => {
+      document.getElementById('cstep' + n).classList.toggle('active', n === checkoutStep);
+      const dot = document.getElementById('sdot' + n);
+      dot.classList.toggle('active', n === checkoutStep);
+      dot.classList.toggle('done', n < checkoutStep);
+    });
+
+    // Title
+    const titles = { 1: 'Review Order', 2: 'Delivery Details', 3: 'Order Confirmed!' };
+    document.getElementById('checkoutTitle').textContent = titles[checkoutStep];
+
+    // Step indicator visibility
+    document.getElementById('stepIndicator').style.display = checkoutStep === 3 ? 'none' : 'flex';
+
+    // Footer buttons
+    const footer = document.getElementById('checkoutFooter');
+    const backBtn = document.getElementById('checkoutBackBtn');
+    const nextBtn = document.getElementById('checkoutNextBtn');
+    if (checkoutStep === 3) {
+      footer.style.display = 'none';
+    } else {
+      footer.style.display = 'flex';
+      backBtn.style.display = checkoutStep > 1 ? 'block' : 'none';
+      nextBtn.textContent = checkoutStep === 1 ? 'Continue to Delivery →' : 'Place Order ☕';
+    }
+
+    // Step 1: render order items
+    if (checkoutStep === 1) {
+      const sub = getSubtotal();
+      document.getElementById('checkoutItemsList').innerHTML = cart.map(i => `
+        <div class="checkout-order-item">
+          <span>${i.icon} <span class="ci-name">${i.name}</span> <span class="ci-qty">× ${i.qty}</span></span>
+          <span class="ci-price">${fmt(i.price * i.qty)}</span>
+        </div>`).join('');
+      document.getElementById('co-subtotal').textContent = fmt(sub);
+      document.getElementById('co-delivery').textContent = fmt(DELIVERY_FEE);
+      document.getElementById('co-total').textContent = fmt(sub + DELIVERY_FEE);
+    }
+  }
+
+  function checkoutNext() {
+    if (checkoutStep === 1) {
+      checkoutStep = 2; renderCheckoutStep();
+    } else if (checkoutStep === 2) {
+      if (!validateDeliveryForm()) return;
+      checkoutStep = 3;
+      // Set order number and ETA
+      const num = 'KAP-' + String(Math.floor(Math.random()*90000)+10000);
+      document.getElementById('orderNumber').textContent = 'Order #' + num;
+      const eta = orderMode === 'pickup' ? '⏱ Ready in 10–15 mins' : '🛵 Estimated delivery: 30–45 mins';
+      document.getElementById('orderEta').textContent = eta;
+      renderCheckoutStep();
+      cart = []; renderCart(); // Clear cart after order
+    }
+  }
+
+  function checkoutBack() {
+    if (checkoutStep > 1) { checkoutStep--; renderCheckoutStep(); }
+  }
+
+  /* ── Delivery mode toggle ── */
+  function setMode(mode) {
+    orderMode = mode;
+    document.getElementById('deliveryBtn').classList.toggle('active', mode === 'delivery');
+    document.getElementById('pickupBtn').classList.toggle('active', mode === 'pickup');
+    document.getElementById('deliveryFields').classList.toggle('show', mode === 'delivery');
+    document.getElementById('pickupFields').classList.toggle('show', mode === 'pickup');
+    document.getElementById('co-delivery').textContent = mode === 'pickup' ? '₱0' : fmt(DELIVERY_FEE);
+    const sub = getSubtotal();
+    document.getElementById('co-total').textContent = fmt(sub + (mode === 'pickup' ? 0 : DELIVERY_FEE));
+  }
+
+  /* ── Payment option ── */
+  function selectPay(el) {
+    document.querySelectorAll('.payment-opt').forEach(o => o.classList.remove('selected'));
+    el.classList.add('selected');
+    selectedPayment = el.dataset.pay;
+  }
+
+  /* ── Delivery form validation ── */
+  function validateDeliveryForm() {
+    let ok = true;
+    function coCheck(fieldId, groupId, fn) {
+      const f = document.getElementById(fieldId);
+      const g = document.getElementById(groupId);
+      if (!f || !g) return;
+      const valid = fn(f.value.trim());
+      g.classList.toggle('co-has-error', !valid);
+      f.classList.toggle('co-error', !valid);
+      if (!valid) ok = false;
+    }
+    const phRe = /^(\+63|0)[\s-]?9\d{2}[\s-]?\d{3}[\s-]?\d{4}$/;
+    if (orderMode === 'delivery') {
+      coCheck('co-fname', 'cfg-fname', v => v.length >= 1);
+      coCheck('co-lname', 'cfg-lname', v => v.length >= 1);
+      coCheck('co-phone', 'cfg-phone', v => phRe.test(v.replace(/\s/g,'')));
+      coCheck('co-address', 'cfg-address', v => v.length >= 5);
+      coCheck('co-city', 'cfg-city', v => v !== '');
+    } else {
+      coCheck('co-pfname', 'cfg-pfname', v => v.length >= 1);
+      coCheck('co-plname', 'cfg-plname', v => v.length >= 1);
+      coCheck('co-pphone', 'cfg-pphone', v => phRe.test(v.replace(/\s/g,'')));
+      coCheck('co-branch', 'cfg-branch', v => v !== '');
+    }
+    return ok;
+  }
+
+
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    let valid = true;
+    function check(fieldId, groupId, fn) {
+      const field = document.getElementById(fieldId);
+      const group = document.getElementById(groupId);
+      const ok = fn(field.value.trim());
+      group.classList.toggle('has-error', !ok);
+      field.classList.toggle('error', !ok);
+      if (!ok) valid = false;
+      field.addEventListener('input', () => {
+        if (fn(field.value.trim())) { group.classList.remove('has-error'); field.classList.remove('error'); }
+      });
+    }
+    check('name', 'fg-name', v => v.length >= 2);
+    check('email', 'fg-email', v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v));
+    check('subject', 'fg-subject', v => v !== '');
+    check('message', 'fg-message', v => v.length >= 10);
+    if (valid) {
+      document.getElementById('contactFormWrap').style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+    }
+  });
+</script>
+</body>
+</html>
