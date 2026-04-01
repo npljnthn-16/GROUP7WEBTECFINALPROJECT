@@ -114,21 +114,9 @@ No build tools, package managers, or dependencies are required.
 
 ## Deployment
 
-The site is deployed via **[Netlify / Vercel / GitHub Pages]** *(replace with your actual platform and link)*.
+The site is deployed via **GitHub Pages** 
 
-**Live URL:** `https://your-deployment-url.here`
-
-**To deploy via Netlify (drag & drop):**
-1. Go to [netlify.com](https://netlify.com) and sign in
-2. Drag your entire project folder into the Netlify dashboard
-3. Your site goes live instantly with a generated URL
-
-**To deploy via GitHub Pages:**
-1. Push the project to a public GitHub repository
-2. Go to **Settings → Pages**
-3. Set source to the `main` branch, root folder (`/`)
-4. GitHub generates and provides a live URL
-
+**Live URL:https:npljnthn-16.github.io%2FGROUP7WEBTECFINALPROJECT** `https://your-deployment-url.here`
 
 ## Group Members
 
