@@ -119,7 +119,7 @@ No build tools, package managers, or dependencies are required.
 
 The site is deployed via **GitHub Pages** 
 
-**Live URL:** `[https://npljnthn-16.github.io/GROUP7WEBTECFINALPROJECT}`
+**Live URL:** `[https://npljnthn-16.github.io/GROUP7WEBTECFINALPROJECT]`
 
 ## Group Members
 
