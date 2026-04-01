@@ -65,31 +65,34 @@ The site is built **mobile-first** and scales up through two breakpoints:
 ```
 kapee/
 │
-├── index.html          # Complete single-file website (HTML + CSS + JS)
+├── index.html          # Complete file website (HTML & CSS + JS)
 │
 └── img/                # Folder for all menu item photos
-    ├── menu-kapee-classic.jpg
-    ├── menu-americano.jpg
-    ├── menu-flat-white.jpg
-    ├── menu-cortado.jpg
-    ├── menu-cappuccino.jpg
-    ├── menu-milk-honey-latte.jpg
-    ├── menu-iced-americano.jpg
-    ├── menu-cold-brew.jpg
-    ├── menu-iced-latte.jpg
-    ├── menu-brown-sugar-latte.jpg
-    ├── menu-nitro-cold-brew.jpg
-    ├── menu-salted-caramel-cold-brew.jpg
-    ├── menu-kyoto-matcha.jpg
-    ├── menu-hojicha-latte.jpg
-    ├── menu-dark-cocoa-latte.jpg
-    ├── menu-chamomile-tea.jpg
-    ├── menu-butter-croissant.jpg
-    ├── menu-avocado-toast.jpg
-    ├── menu-banana-loaf.jpg
-    ├── menu-chicken-panini.jpg
-    ├── menu-choco-cookie.jpg
-    └── menu-quinoa-bowl.jpg
+    ├── americano.jpg
+    ├── avocadotoast.jpg
+    ├── brownbutterbananaloaf.jpg
+    ├── buttercroissant.jpg
+    ├── cappuccino.jpg
+    ├── chamomilehoneytea.jpg
+    ├── coldbrew.jpg
+    ├── cortado.jpg
+    ├── darkchocolatechipcookie.jpg
+    ├── darkcocoalatte.jpg
+    ├── flatwhite.jpg
+    ├── grilledchickenpanini.jpg
+    ├── hojichalatte.jpg
+    ├── icedamericano.jpg
+    ├── icedbrownsugarlatte.jpg
+    ├── icedlatte.jpg
+    ├── kapeeclassic.jpg
+    ├── kyotomatcha.jpg
+    ├── leadbg.jpg
+    ├── mainbg.jpg
+    ├── milkandhoneylatte.jpg
+    └── nitrocoldbrew.jpg
+    ├── quinoagrainbowl.jpg
+    ├── saltedcaramelcoldbrew.jpg
+    └── storybg.jfif
 ```
 
 ---
@@ -110,13 +113,13 @@ No build tools, package managers, or dependencies are required.
 
 > **Note:** Option 2 is recommended so that local images in the `img/` folder load correctly in all browsers.
 
----
+
 
 ## Deployment
 
 The site is deployed via **GitHub Pages** 
 
-**Live URL:https:npljnthn-16.github.io%2FGROUP7WEBTECFINALPROJECT** `https://your-deployment-url.here`
+**Live URL:** `[https://your-deployment-url.here](https://npljnthn-16.github.io/GROUP7WEBTECFINALPROJECT)`
 
 ## Group Members
 
